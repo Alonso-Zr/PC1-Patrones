@@ -6,11 +6,11 @@ import java.util.List;
 public class OrderService {
     private List<OrderObserver> observadores = new ArrayList<>();
 
-    public void añadirObserver(OrderObserver observador) {
+    public void agregarObserver(OrderObserver observador) {
         observadores.add(observador);
     }
 
-    public void confirmOrder(double total) {
+    public void confirmarOrden(double total) {
         System.out.printf("Compra confirmada por S/ %.2f\n", total);
         notificarObservadores("Orden completada");
     }
